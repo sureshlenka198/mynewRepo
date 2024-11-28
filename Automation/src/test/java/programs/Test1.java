@@ -9,7 +9,7 @@ import org.testng.annotations.*;
 public class Test1 {
 
 		public String baseUrl = "http://demo.guru99.com/test/newtours/";
-	    String driverPath = "C:\\Users\\lenka_suresh\\eclipse-workspace2\\Automation\\drivers\\geckodriver.exe";
+	    String driverPath = System.getProperty("user.dir")+"/drivers/geckodriver.exe";
 	    public WebDriver driver; 
 	    public String expected = null;
 	    public String actual = null;
