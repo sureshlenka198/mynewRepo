@@ -9,16 +9,15 @@ import org.testng.annotations.*;
 public class Test1 {
 
 		public String baseUrl = "http://demo.guru99.com/test/newtours/";
-	    String driverPath = System.getProperty("user.dir")+"/drivers/geckodriver.exe";
 	    public WebDriver driver; 
 	    public String expected = null;
 	    public String actual = null;
 	        @BeforeTest
 	      public void launchBrowser() {
 	          System.out.println("launching firefox browser"); 
-	          
-	          System.setProperty("webdriver.gecko.driver", driverPath);
-	          driver= new FirefoxDriver();
+	          ChromeOptions options = new ChromeOptions();
+	          options.addArguments("--headless");
+	          driver= new ChromeDriver(options);
 	          driver.get(baseUrl);
 	      }
 	      
