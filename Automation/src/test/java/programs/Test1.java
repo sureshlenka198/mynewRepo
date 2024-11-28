@@ -21,7 +21,7 @@ public class Test1 {
 	      public void launchBrowser() {
 	          System.out.println("launching firefox browser"); 
 	          ChromeOptions options = new ChromeOptions();
-	          options.addArguments("--headless");
+	         
 	          driver= new ChromeDriver(options);
 	          driver.get(baseUrl);
 	      }
